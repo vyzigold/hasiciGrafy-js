@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hasičská liga - Praděd Grafy</title>
+	<link rel="stylesheet" href="css/styly.css">
+	<script src="stranka.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="obal">
+		<header>
+			<h1>Muži - Body</h1>
+		</header>
+        <nav class="menu">
+          <ul>
+            <li class="prvni">
+            	<a href="index.html" onmouseover="vysun(1)" onmouseout="out(1)">Body</a>
+            	<ul id="1" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="hBody.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="index.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mCasy.html" onmouseover="vysun(2)" onmouseout="out(2)">Časy</a>
+            	<ul id="2" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="hCasy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="mCasy.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mProudy.html" onmouseover="vysun(3)" onmouseout="out(3)">Proudy</a>
+            	<ul id="3" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="hProudy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="mProudy.html">Muži</a></li>
+            	</ul>
+            </li>
+          </ul>
+        </nav>
+
+        <canvas height = "600" width="900" id="muziBody"></canvas>
+        <table>
+            <tr>
+                <th></th>
+                <th>Břidličná</th>
+                <th>Janovice</th>
+                <th>Liptaň</th>
+                <th>Milotice</th>
+                <th>Slezské Rudoltice 3B</th>
+                <th>Rýžoviště</th>
+                <th>Kunětice</th>
+                <th>Leskovec</th>
+                <th>Stará Červená voda 3B</th>
+                <th>Široký Brod</th>
+                <th>Zátor</th>
+                <th>Široká Niva</th>
+                <th>Lipová - Lázně</th>
+                <th>Bílý Potok</th>
+                <th>Vrbno 3B</th>
+                <th style="font-size:12px;">CELKEM</th>
+            </tr>
+
+            <tr>
+                <th id = "aaa">SDH</th>
+                <td id = "a1"></td>
+                <td id = "a2"></td>
+                <td id = "a3"></td>
+                <td id = "a4"></td>
+                <td id = "a5"></td>
+                <td id = "a6"></td>
+                <td id = "a7"></td>
+                <td id = "a8"></td>
+                <td id = "a9"></td>
+                <td id = "a10"></td>
+                <td id = "a11"></td>
+                <td id = "a12"></td>
+                <td id = "a13"></td>
+                <td id = "a14"></td>
+                <td id = "a15"></td>
+                <td id = "celkem"></td>
+            </tr>
+        </table>
+	<script src="scriptt2.js" type="text/javascript"></script>
+	<script>
+
+
+addTime("muzi","Leskovec",1527,1);
+addTime("muzi","Vrbno",1626,1);
+addTime("muzi","Zator",1688,1);
+addTime("muzi","SuchaRudna",1691,1);
+addTime("muzi","StaraCervenaVoda",1720,1);
+addTime("muzi","Janovice",1749,1);
+addTime("muzi","Lipovalazne",1755,1);
+addTime("muzi","Ryzoviste",1797,1);
+addTime("muzi","SirokaNiva",1853,1);
+addTime("muzi","KuneticeB",1870,1);
+addTime("muzi","Liptan",1970,1);
+addTime("muzi","SirokyBrodA",2185,1);
+addTime("muzi","SirokyBrodB",2022,1);
+addTime("muzi","KuneticeA",2203,1);
+addTime("muzi","StaraVes",3015,1);
+addTime("muzi","BilyPotok",3212,1);
+addTime("muzi","SlezskeRudoltice",3220,1);
+addTime("muzi","Milotice",3287,1);
+addTime("muzi","Karlovice",3464,1);
+addTime("muzi","Bridlicna",4907,1);
+addTime("muzi","SuchaRudnaB",7000,1);
+addTime("muzi","VrbnoB",7000,1);
+
+addTime("muzi","Leskovec",7000,2);
+addTime("muzi","Vrbno",1559,2);
+addTime("muzi","Zator",2351,2);
+addTime("muzi","SuchaRudna",1975,2);
+addTime("muzi","StaraCervenaVoda",1676,2);
+addTime("muzi","Janovice",1602,2);
+addTime("muzi","Lipovalazne",7000,2);
+addTime("muzi","Ryzoviste",1897,2);
+addTime("muzi","SirokaNiva",1727,2);
+addTime("muzi","KuneticeB",1777,2);
+addTime("muzi","Liptan",1784,2);
+addTime("muzi","SirokyBrodA",1583,2);
+addTime("muzi","SirokyBrodB",1709,2);
+addTime("muzi","KuneticeA",1819,2);
+addTime("muzi","StaraVes",2385,2);
+addTime("muzi","BilyPotok",1550,2);
+addTime("muzi","SlezskeRudoltice",1864,2);
+addTime("muzi","Milotice",1627,2);
+addTime("muzi","Karlovice",7000,2);
+addTime("muzi","Bridlicna",1643,2);
+addTime("muzi","SuchaRudnaB",7000,2);
+addTime("muzi","VrbnoB",7000,2);
+
+
+addTime("muzi","Leskovec",1993,3);
+addTime("muzi","Vrbno",1614,3);
+addTime("muzi","Zator",3064,3);
+addTime("muzi","SuchaRudna",1735,3);
+addTime("muzi","StaraCervenaVoda",1655,3);
+addTime("muzi","Janovice",2852,3);
+addTime("muzi","Lipovalazne",1829,3);
+addTime("muzi","Ryzoviste",2173,3);
+addTime("muzi","SirokaNiva",1834,3);
+addTime("muzi","KuneticeB",1853,3);
+addTime("muzi","Liptan",2095,3);
+addTime("muzi","SirokyBrodA",1733,3);
+addTime("muzi","SirokyBrodB",1745,3);
+addTime("muzi","KuneticeA",2357,3);
+addTime("muzi","StaraVes",7000,3);
+addTime("muzi","BilyPotok",1887,3);
+addTime("muzi","SlezskeRudoltice",2041,3);
+addTime("muzi","Milotice",2860,3);
+addTime("muzi","Karlovice",2628,3);
+addTime("muzi","Bridlicna",1997,3);
+addTime("muzi","SuchaRudnaB",2619,3);
+addTime("muzi","VrbnoB",7000,3);
+addTime("muzi","Vraclavek",3809,3);
+addTime("muzi","TremesnaII",6600,3);
+
+
+addTime("muzi","Leskovec",1516,4);
+addTime("muzi","Vrbno",1577,4);
+addTime("muzi","Zator",3885,4);
+addTime("muzi","SuchaRudna",1743,4);
+addTime("muzi","StaraCervenaVoda",1708,4);
+addTime("muzi","Janovice",1547,4);
+addTime("muzi","Lipovalazne",7000,4);
+addTime("muzi","Ryzoviste",2191,4);
+addTime("muzi","SirokaNiva",1756,4);
+addTime("muzi","KuneticeB",1722,4);
+addTime("muzi","Liptan",1746,4);
+addTime("muzi","SirokyBrodA",1523,4);
+addTime("muzi","SirokyBrodB",1888,4);
+addTime("muzi","KuneticeA",1827,4);
+addTime("muzi","StaraVes",7000,4);
+addTime("muzi","BilyPotok",1801,4);
+addTime("muzi","SlezskeRudoltice",3380,4);
+addTime("muzi","Milotice",2926,4);
+addTime("muzi","Karlovice",2496,4);
+addTime("muzi","Bridlicna",2231,4);
+addTime("muzi","SuchaRudnaB",2503,4);
+addTime("muzi","VrbnoB",1654,4);
+addTime("muzi","Vraclavek",7000,4);
+addTime("muzi","TremesnaII",7000,4);
+
+
+addTime("muzi","Leskovec",1875,5);
+addTime("muzi","Vrbno",1852,5);
+addTime("muzi","Zator",7000,5);
+addTime("muzi","SuchaRudna",7000,5);
+addTime("muzi","StaraCervenaVoda",2185,5);
+addTime("muzi","Janovice",1910,5);
+addTime("muzi","Lipovalazne",7000,5);
+addTime("muzi","Ryzoviste",2277,5);
+addTime("muzi","SirokaNiva",2339,5);
+addTime("muzi","KuneticeB",1994,5);
+addTime("muzi","Liptan",3668,5);
+addTime("muzi","SirokyBrodA",2211,5);
+addTime("muzi","SirokyBrodB",7000,5);
+addTime("muzi","KuneticeA",2097,5);
+addTime("muzi","StaraVes",2600,5);
+addTime("muzi","BilyPotok",1966,5);
+addTime("muzi","SlezskeRudoltice",2184,5);
+addTime("muzi","Milotice",2451,5);
+addTime("muzi","Karlovice",7000,5);
+addTime("muzi","Bridlicna",2304,5);
+addTime("muzi","SuchaRudnaB",7000,5);
+addTime("muzi","VrbnoB",3304,5);
+addTime("muzi","Vraclavek",2607,5);
+addTime("muzi","TremesnaII",7000,5);
+
+
+addTime("muzi","Leskovec",2452,6);
+addTime("muzi","Vrbno",1570,6);
+addTime("muzi","Zator",1772,6);
+addTime("muzi","SuchaRudna",1718,6);
+addTime("muzi","StaraCervenaVoda",1857,6);
+addTime("muzi","Janovice",1605,6);
+addTime("muzi","Lipovalazne",7000,6);
+addTime("muzi","Ryzoviste",1872,6);
+addTime("muzi","SirokaNiva",2862,6);
+addTime("muzi","KuneticeB",1646,6);
+addTime("muzi","Liptan",1998,6);
+addTime("muzi","SirokyBrodA",2797,6);
+addTime("muzi","SirokyBrodB",1774,6);
+addTime("muzi","KuneticeA",7000,6);
+addTime("muzi","StaraVes",1961,6);
+addTime("muzi","BilyPotok",1641,6);
+addTime("muzi","SlezskeRudoltice",1923,6);
+addTime("muzi","Milotice",2288,6);
+addTime("muzi","Karlovice",2226,6);
+addTime("muzi","Bridlicna",2725,6);
+addTime("muzi","SuchaRudnaB",7000,6);
+addTime("muzi","VrbnoB",1801,6);
+addTime("muzi","Vraclavek",7000,6);
+addTime("muzi","TremesnaII",7000,6);
+
+
+addTime("muzi","Leskovec",1665,7);
+addTime("muzi","Vrbno",1686,7);
+addTime("muzi","Zator",2089,7);
+addTime("muzi","SuchaRudna",1696,7);
+addTime("muzi","StaraCervenaVoda",1724,7);
+addTime("muzi","Janovice",1536,7);
+addTime("muzi","Lipovalazne",7000,7);
+addTime("muzi","Ryzoviste",20932,7);
+addTime("muzi","SirokaNiva",1664,7);
+addTime("muzi","KuneticeB",1796,7);
+addTime("muzi","Liptan",2267,7);
+addTime("muzi","SirokyBrodA",3013,7);
+addTime("muzi","SirokyBrodB",1657,7);
+addTime("muzi","KuneticeA",1842,7);
+addTime("muzi","StaraVes",7000,7);
+addTime("muzi","BilyPotok",1724,7);
+addTime("muzi","SlezskeRudoltice",7000,7);
+addTime("muzi","Milotice",2113,7);
+addTime("muzi","Karlovice",4262,7);
+addTime("muzi","Bridlicna",1701,7);
+addTime("muzi","SuchaRudnaB",1967,7);
+addTime("muzi","VrbnoB",7000,7);
+addTime("muzi","Vraclavek",7000,7);
+addTime("muzi","TremesnaII",7000,7);
+
+
+addTime("muzi","Leskovec",3013,8);
+addTime("muzi","Vrbno",1615,8);
+addTime("muzi","Zator",1797,8);
+addTime("muzi","SuchaRudna",3372,8);
+addTime("muzi","StaraCervenaVoda",7000,8);
+addTime("muzi","Janovice",1510,8);
+addTime("muzi","Lipovalazne",1701,8);
+addTime("muzi","Ryzoviste",2791,8);
+addTime("muzi","SirokaNiva",7000,8);
+addTime("muzi","KuneticeB",1702,8);
+addTime("muzi","Liptan",1834,8);
+addTime("muzi","SirokyBrodA",1890,8);
+addTime("muzi","SirokyBrodB",1678,8);
+addTime("muzi","KuneticeA",7000,8);
+addTime("muzi","StaraVes",3392,8);
+addTime("muzi","BilyPotok",1583,8);
+addTime("muzi","SlezskeRudoltice",1828,8);
+addTime("muzi","Milotice",2958,8);
+addTime("muzi","Karlovice",7000,8);
+addTime("muzi","Bridlicna",3070,8);
+addTime("muzi","SuchaRudnaB",1884,8);
+addTime("muzi","VrbnoB",7000,8);
+addTime("muzi","Vraclavek",7000,8);
+addTime("muzi","TremesnaII",7000,8);
+
+
+addTime("muzi","Leskovec",2041,9);
+addTime("muzi","Vrbno",2083,9);
+addTime("muzi","Zator",1944,9);
+addTime("muzi","SuchaRudna",2886,9);
+addTime("muzi","StaraCervenaVoda",1922,9);
+addTime("muzi","Janovice",1784,9);
+addTime("muzi","Lipovalazne",7000,9);
+addTime("muzi","Ryzoviste",2112,9);
+addTime("muzi","SirokaNiva",3324,9);
+addTime("muzi","KuneticeB",2391,9);
+addTime("muzi","Liptan",2366,9);
+addTime("muzi","SirokyBrodA",1935,9);
+addTime("muzi","SirokyBrodB",1956,9);
+addTime("muzi","KuneticeA",2004,9);
+addTime("muzi","StaraVes",7000,9);
+addTime("muzi","BilyPotok",1867,9);
+addTime("muzi","SlezskeRudoltice",2250,9);
+addTime("muzi","Milotice",2148,9);
+addTime("muzi","Karlovice",7000,9);
+addTime("muzi","Bridlicna",2033,9);
+addTime("muzi","SuchaRudnaB",7000,9);
+addTime("muzi","VrbnoB",7000,9);
+addTime("muzi","Vraclavek",7000,9);
+addTime("muzi","TremesnaII",7000,9);
+
+
+addTime("muzi","Leskovec",2497,10);
+addTime("muzi","Vrbno",1611,10);
+addTime("muzi","Zator",1750,10);
+addTime("muzi","SuchaRudna",1704,10);
+addTime("muzi","StaraCervenaVoda",1752,10);
+addTime("muzi","Janovice",2688,10);
+addTime("muzi","Lipovalazne",1706,10);
+addTime("muzi","Ryzoviste",1810,10);
+addTime("muzi","SirokaNiva",2355,10);
+addTime("muzi","KuneticeB",1646,10);
+addTime("muzi","Liptan",2021,10);
+addTime("muzi","SirokyBrodA",1603,10);
+addTime("muzi","SirokyBrodB",1663,10);
+addTime("muzi","KuneticeA",1773,10);
+addTime("muzi","StaraVes",7000,10);
+addTime("muzi","BilyPotok",1638,10);
+addTime("muzi","SlezskeRudoltice",2282,10);
+addTime("muzi","Milotice",1840,10);
+addTime("muzi","Karlovice",2231,10);
+addTime("muzi","Bridlicna",1865,10);
+addTime("muzi","SuchaRudnaB",7000,10);
+addTime("muzi","VrbnoB",1584,10);
+addTime("muzi","Vraclavek",7000,10);
+addTime("muzi","TremesnaII",7000,10);
+
+
+addTime("muzi","Leskovec",7000,11);
+addTime("muzi","Vrbno",2393,11);
+addTime("muzi","Zator",1966,11);
+addTime("muzi","SuchaRudna",1827,11);
+addTime("muzi","StaraCervenaVoda",1624,11);
+addTime("muzi","Janovice",1647,11);
+addTime("muzi","Lipovalazne",1981,11);
+addTime("muzi","Ryzoviste",1787,11);
+addTime("muzi","SirokaNiva",2678,11);
+addTime("muzi","KuneticeB",2577,11);
+addTime("muzi","Liptan",1766,11);
+addTime("muzi","SirokyBrodA",1555,11);
+addTime("muzi","SirokyBrodB",1694,11);
+addTime("muzi","KuneticeA",1708,11);
+addTime("muzi","StaraVes",2635,11);
+addTime("muzi","BilyPotok",7000,11);
+addTime("muzi","SlezskeRudoltice",2741,11);
+addTime("muzi","Milotice",1848,11);
+addTime("muzi","Karlovice",2915,11);
+addTime("muzi","Bridlicna",1723,11);
+addTime("muzi","SuchaRudnaB",2058,11);
+addTime("muzi","VrbnoB",2668,11);
+addTime("muzi","Vraclavek",7000,11);
+addTime("muzi","TremesnaII",7000,11);
+
+
+addTime("muzi","Leskovec",2354,12);
+addTime("muzi","Vrbno",7000,12);
+addTime("muzi","Zator",1999,12);
+addTime("muzi","SuchaRudna",2537,12);
+addTime("muzi","StaraCervenaVoda",1914,12);
+addTime("muzi","Janovice",1776,12);
+addTime("muzi","Lipovalazne",1916,12);
+addTime("muzi","Ryzoviste",2844,12);
+addTime("muzi","SirokaNiva",2362,12);
+addTime("muzi","KuneticeB",2184,12);
+addTime("muzi","Liptan",2100,12);
+addTime("muzi","SirokyBrodA",7000,12);
+addTime("muzi","SirokyBrodB",2053,12);
+addTime("muzi","KuneticeA",2175,12);
+addTime("muzi","StaraVes",7000,12);
+addTime("muzi","BilyPotok",2080,12);
+addTime("muzi","SlezskeRudoltice",2245,12);
+addTime("muzi","Milotice",2042,12);
+addTime("muzi","Karlovice",2536,12);
+addTime("muzi","Bridlicna",3318,12);
+addTime("muzi","SuchaRudnaB",7000,12);
+addTime("muzi","VrbnoB",7000,12);
+addTime("muzi","Vraclavek",7000,12);
+addTime("muzi","TremesnaII",7000,12);
+
+spocitejBody("muzi");
+printPoradi(document.getElementById("muziBody"),"nic","muzi");
+
+
+pixelOnMouseOver(document.getElementById("muziBody"),function(r,g,b){
+	if(barvy_tymy.muzi["("+r+","+g+","+b+")"]!=undefined)
+	{
+//		document.getElementById("in").innerHTML = barvy_tymy.muzi["("+r+","+g+","+b+")"]+"      "+body.muzi[barvy_tymy.muzi["("+r+","+g+","+b+")"]][0];
+        document.getElementById("aaa").innerHTML = barvy_tymy.muzi["("+r+","+g+","+b+")"];
+        for(var i=0;i<body.muzi[barvy_tymy.muzi["("+r+","+g+","+b+")"]].length-1;i++)
+        {
+            document.getElementById("a"+(i+1)).innerHTML=body.muzi[barvy_tymy.muzi["("+r+","+g+","+b+")"]][i+1];
+        }
+        document.getElementById("celkem").innerHTML=body.muzi[barvy_tymy.muzi["("+r+","+g+","+b+")"]][0];
+		printPoradi(document.getElementById("muziBody"),barvy_tymy.muzi["("+r+","+g+","+b+")"],"muzi");
+	}
+	
+});
+
+
+	</script>
+		
+	</div>
+	
+</body>
+</html>

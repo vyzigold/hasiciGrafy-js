@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hasičská liga - Praděd Grafy</title>
+	<link rel="stylesheet" href="css/styly.css">
+	<script src="stranka.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="obal">
+		<header>
+			<h1>Ženy - Proudy</h1>
+		</header>
+        <nav class="menu">
+          <ul>
+            <li class="prvni">
+            	<a href="index.html" onmouseover="vysun(1)" onmouseout="out(1)">Body</a>
+            	<ul id="1" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="hBody.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="index.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mCasy.html" onmouseover="vysun(2)" onmouseout="out(2)">Časy</a>
+            	<ul id="2" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="hCasy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="mCasy.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mProudy.html" onmouseover="vysun(3)" onmouseout="out(3)">Proudy</a>
+            	<ul id="3" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="hProudy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="mProudy.html">Muži</a></li>
+            	</ul>
+            </li>
+          </ul>
+        </nav>
+
+        <canvas height = "600" width="900" id="muziProudy"></canvas>
+        <table>
+            <tr>
+                <th></th>
+                <th>Břidličná</th>
+                <th>Janovice</th>
+                <th>Liptaň</th>
+                <th>Milotice</th>
+                <th>Slezské Rudoltice 3B</th>
+                <th>Rýžoviště</th>
+                <th>Kunětice</th>
+                <th>Leskovec</th>
+                <th>Stará Červená voda 3B</th>
+                <th>Široký Brod</th>
+                <th>Zátor</th>
+                <th>Široká Niva</th>
+                <th>Lipová - Lázně</th>
+                <th>Bílý Potok</th>
+                <th>Vrbno 3B</th>
+            </tr>
+
+            <tr>
+                <th id = "aaa">x x</th>
+                <td id = "a1"></td>
+                <td id = "a2"></td>
+                <td id = "a3"></td>
+                <td id = "a4"></td>
+                <td id = "a5"></td>
+                <td id = "a6"></td>
+                <td id = "a7"></td>
+                <td id = "a8"></td>
+                <td id = "a9"></td>
+                <td id = "a10"></td>
+                <td id = "a11"></td>
+                <td id = "a12"></td>
+                <td id = "a13"></td>
+                <td id = "a14"></td>
+                <td id = "a15"></td>
+            </tr>
+        </table>
+	<script src="scriptt2.js" type="text/javascript"></script>
+	<script>
+
+addProudari("zeny",1,2357,2547);
+addProudari("zeny",2,2448,2269);
+addProudari("zeny",3,2536,3971);
+
+
+printProudari(document.getElementById("muziProudy"),"nic","zeny");
+
+
+pixelOnMouseOver(document.getElementById("muziProudy"),function(r,g,b){
+	if("("+r+","+g+","+b+")"=="(255,0,0)"||"("+r+","+g+","+b+")"=="(0,0,255)")
+	{
+		//cas = proudari.zeny[(("("+r+","+g+","+b+")" == "(255,0,0)") ? "pProud" : "lProud")][mouse()].toString();
+		//document.getElementById("ba").innerHTML = (("("+r+","+g+","+b+")" == "(255,0,0)") ? "Pravý proud" : "Levý proud")+"      "+cas[0]+cas[1]+","+cas[2]+cas[3];
+        document.getElementById("aaa").innerHTML = (("("+r+","+g+","+b+")" == "(255,0,0)") ? "Pravý proud" : "Levý proud");
+        for(var i=0;i<proudari.zeny.pProud.length;i++)
+        {
+            cas = proudari.zeny[(("("+r+","+g+","+b+")" == "(255,0,0)") ? "pProud" : "lProud")][i].toString();
+            document.getElementById("a"+(i+1)).innerHTML=cas[0]+cas[1]+","+cas[2]+cas[3];
+        }
+		printProudari(document.getElementById("muziProudy"),(("("+r+","+g+","+b+")" == "(255,0,0)") ? "pravy" : "levy"),"zeny");
+	}
+	
+});
+
+	</script>
+		
+	</div>
+	
+</body>
+</html>

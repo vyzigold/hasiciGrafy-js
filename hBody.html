@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hasičská liga - Praděd Grafy</title>
+	<link rel="stylesheet" href="css/styly.css">
+	<script src="stranka.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="obal">
+		<header>
+			<h1>Ženy - Body</h1>
+		</header>
+        <nav class="menu">
+          <ul>
+            <li class="prvni">
+            	<a href="index.html" onmouseover="vysun(1)" onmouseout="out(1)">Body</a>
+            	<ul id="1" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="hBody.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="index.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mCasy.html" onmouseover="vysun(2)" onmouseout="out(2)">Časy</a>
+            	<ul id="2" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="hCasy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="mCasy.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mProudy.html" onmouseover="vysun(3)" onmouseout="out(3)">Proudy</a>
+            	<ul id="3" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="hProudy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="mProudy.html">Muži</a></li>
+            	</ul>
+            </li>
+          </ul>
+        </nav>
+
+        <canvas height = "600" width="900" id="muziBody"></canvas>
+        <table>
+            <tr>
+                <th></th>
+                <th>Břidličná</th>
+                <th>Janovice</th>
+                <th>Liptaň</th>
+                <th>Milotice</th>
+                <th>Slezské Rudoltice 3B</th>
+                <th>Rýžoviště</th>
+                <th>Kunětice</th>
+                <th>Leskovec</th>
+                <th>Stará Červená voda 3B</th>
+                <th>Široký Brod</th>
+                <th>Zátor</th>
+                <th>Široká Niva</th>
+                <th>Lipová - Lázně</th>
+                <th>Bílý Potok</th>
+                <th>Vrbno 3B</th>
+                <th style="font-size:12px;">CELKEM</th>
+            </tr>
+
+            <tr>
+                <th id = "aaa">SDH</th>
+                <td id = "a1"></td>
+                <td id = "a2"></td>
+                <td id = "a3"></td>
+                <td id = "a4"></td>
+                <td id = "a5"></td>
+                <td id = "a6"></td>
+                <td id = "a7"></td>
+                <td id = "a8"></td>
+                <td id = "a9"></td>
+                <td id = "a10"></td>
+                <td id = "a11"></td>
+                <td id = "a12"></td>
+                <td id = "a13"></td>
+                <td id = "a14"></td>
+                <td id = "a15"></td>
+                <td id = "celkem"></td>
+            </tr>
+        </table>
+	<script src="scriptt2.js" type="text/javascript"></script>
+	<script>
+
+
+addTime("zeny","Leskovec",2391,1);
+addTime("zeny","Vrbno",2052,1);
+addTime("zeny","Zator",2547,1);
+addTime("zeny","Janovice",7000,1);
+addTime("zeny","Ryzoviste",7000,1);
+addTime("zeny","SirokaNiva",2218,1);
+addTime("zeny","BilyPotok",7000,1);
+addTime("zeny","SlezskeRudoltice",2567,1);
+addTime("zeny","Vraclavek",7000,1);
+addTime("zeny","SvetlaHora",2605,1);
+addTime("zeny","VelkaKras",7000,1);
+
+addTime("zeny","Leskovec",3398,2);
+addTime("zeny","Vrbno",4882,2);
+addTime("zeny","Zator",2448,2);
+addTime("zeny","Janovice",3705,2);
+addTime("zeny","Ryzoviste",4630,2);
+addTime("zeny","SirokaNiva",1872,2);
+addTime("zeny","BilyPotok",1967,2);
+addTime("zeny","SlezskeRudoltice",2370,2);
+addTime("zeny","Vraclavek",7000,2);
+addTime("zeny","SvetlaHora",3530,2);
+addTime("zeny","VelkaKras",7000,2);
+
+
+addTime("zeny","Leskovec",2061,3);
+addTime("zeny","Vrbno",3350,3);
+addTime("zeny","Zator",3971,3);
+addTime("zeny","Janovice",2779,3);
+addTime("zeny","Ryzoviste",2141,3);
+addTime("zeny","SirokaNiva",2066,3);
+addTime("zeny","BilyPotok",2229,3);
+addTime("zeny","SlezskeRudoltice",3527,3);
+addTime("zeny","Vraclavek",7000,3);
+addTime("zeny","SvetlaHora",2804,3);
+addTime("zeny","VelkaKras",3486,3);
+
+
+spocitejBody("zeny");
+printPoradi(document.getElementById("muziBody"),"nic","zeny");
+
+pixelOnMouseOver(document.getElementById("muziBody"),function(r,g,b){
+    if(barvy_tymy.zeny["("+r+","+g+","+b+")"]!=undefined)
+    {
+//      document.getElementById("in").innerHTML = barvy_tymy.zeny["("+r+","+g+","+b+")"]+"      "+body.zeny[barvy_tymy.zeny["("+r+","+g+","+b+")"]][0];
+        document.getElementById("aaa").innerHTML = barvy_tymy.zeny["("+r+","+g+","+b+")"];
+        for(var i=0;i<body.zeny[barvy_tymy.zeny["("+r+","+g+","+b+")"]].length-1;i++)
+        {
+            document.getElementById("a"+(i+1)).innerHTML=body.zeny[barvy_tymy.zeny["("+r+","+g+","+b+")"]][i+1];
+        }
+        document.getElementById("celkem").innerHTML=body.zeny[barvy_tymy.zeny["("+r+","+g+","+b+")"]][0];
+        printPoradi(document.getElementById("muziBody"),barvy_tymy.zeny["("+r+","+g+","+b+")"],"zeny");
+    }
+    
+});
+
+
+	</script>
+		
+	</div>
+	
+</body>
+</html>

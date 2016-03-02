@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hasičská liga - Praděd Grafy</title>
+	<link rel="stylesheet" href="css/styly.css">
+	<script src="stranka.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="obal">
+		<header>
+			<h1>Muži - Časy</h1>
+		</header>
+        <nav class="menu">
+          <ul>
+            <li class="prvni">
+            	<a href="index.html" onmouseover="vysun(1)" onmouseout="out(1)">Body</a>
+            	<ul id="1" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="hBody.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(1)" onmouseout="out(1)" href="index.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mCasy.html" onmouseover="vysun(2)" onmouseout="out(2)">Časy</a>
+            	<ul id="2" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="hCasy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(2)" onmouseout="out(2)" href="mCasy.html">Muži</a></li>
+            	</ul>
+            </li>
+            <li class="prvni">
+            	<a href="mProudy.html" onmouseover="vysun(3)" onmouseout="out(3)">Proudy</a>
+            	<ul id="3" style="visibility:hidden;">
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="hProudy.html">Ženy</a></li>
+            		<li><a onmouseover="vysun(3)" onmouseout="out(3)" href="mProudy.html">Muži</a></li>
+            	</ul>
+            </li>
+          </ul>
+        </nav>
+
+        <table style="top:5px;" >
+            <tr>
+                <th id="BilyPotok">Bílý Potok <br> <input type="checkbox" id="BilyPotokinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Bridlicna">Břidličná <br> <input type="checkbox" id="Bridlicnainp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Janovice">Janovice <br> <input type="checkbox" id="Janoviceinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Karlovice">Karlovice <br> <input type="checkbox" id="Karloviceinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="KuneticeA">Kunětice A <br> <input type="checkbox" id="KuneticeAinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="KuneticeB">Kunětice B <br> <input type="checkbox" id="KuneticeBinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Leskovec">Leskovec: <br> <input type="checkbox" id="Leskovecinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Lipovalazne">Lipová - lázně: <br> <input type="checkbox" id="Lipovalazneinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Liptan">Liptaň: <br> <input type="checkbox" id="Liptaninp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Milotice">Milotice <br> <input type="checkbox" id="Miloticeinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Ryzoviste">Rýžoviště <br> <input type="checkbox" id="Ryzovisteinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="SirokaNiva">Široká Niva <br> <input type="checkbox" id="SirokaNivainp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="oznacit"><button  onclick="oznac('muzi',true),printGraf(document.getElementById('muziVsichniC'),'nic','muzi')">Označit vše</button></th>
+            </tr>
+            <tr>
+                <th id="SirokyBrodA">Široký Brod A <br> <input type="checkbox" id="SirokyBrodAinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="SirokyBrodB">Široký Brod B <br> <input type="checkbox" id="SirokyBrodBinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="SlezskeRudoltice">Slezské Rudoltice <br> <input type="checkbox" id="SlezskeRudolticeinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="StaraCervenaVoda">Stará Červená Voda <br> <input type="checkbox" id="StaraCervenaVodainp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="StaraVes">Stará Ves <br> <input type="checkbox" id="StaraVesinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="SuchaRudna">Suchá Rudná <br> <input type="checkbox" id="SuchaRudnainp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="SuchaRudnaB">Suchá Rudná B <br> <input type="checkbox" id="SuchaRudnaBinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="TremesnaII">Třemešná II <br> <input type="checkbox" id="TremesnaIIinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Vraclavek">Vraclávek <br> <input type="checkbox" id="Vraclavekinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Vrbno">Vrbno <br> <input type="checkbox" id="Vrbnoinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="VrbnoB">Vrbno B <br> <input type="checkbox" id="VrbnoBinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="Zator">Zátor <br> <input type="checkbox" id="Zatorinp" onclick="printGraf(document.getElementById('muziVsichniC'),'nic','muzi')"></th>
+                <th id="odznacit"><button  onclick="oznac('muzi',false),printGraf(document.getElementById('muziVsichniC'),'nic','muzi')">Odznačit vše</button></th>
+            </tr>
+        </table>
+
+        <canvas height = "600" width="900" id="muziVsichniC"></canvas>
+        <table>
+            <tr>
+                <th></th>
+                <th>Břidličná</th>
+                <th>Janovice</th>
+                <th>Liptaň</th>
+                <th>Milotice</th>
+                <th>Slezské Rudoltice 3B</th>
+                <th>Rýžoviště</th>
+                <th>Kunětice</th>
+                <th>Leskovec</th>
+                <th>Stará Červená voda 3B</th>
+                <th>Široký Brod</th>
+                <th>Zátor</th>
+                <th>Široká Niva</th>
+                <th>Lipová - Lázně</th>
+                <th>Bílý Potok</th>
+                <th>Vrbno 3B</th>
+            </tr>
+
+            <tr>
+                <th id = "aaa">SDH</th>
+                <td id = "a1"></td>
+                <td id = "a2"></td>
+                <td id = "a3"></td>
+                <td id = "a4"></td>
+                <td id = "a5"></td>
+                <td id = "a6"></td>
+                <td id = "a7"></td>
+                <td id = "a8"></td>
+                <td id = "a9"></td>
+                <td id = "a10"></td>
+                <td id = "a11"></td>
+                <td id = "a12"></td>
+                <td id = "a13"></td>
+                <td id = "a14"></td>
+                <td id = "a15"></td>
+                </tr>
+        </table>
+	<script src="scriptt2.js" type="text/javascript"></script>
+	<script>
+    pridejBarvu("muzi");
+
+for(var i = 0; i<tymy.muzi.length;i++)
+    document.getElementById(tymy.muzi[i]+"inp").checked=true;
+
+addTime("muzi","Leskovec",1527,1);
+addTime("muzi","Vrbno",1626,1);
+addTime("muzi","Zator",1688,1);
+addTime("muzi","SuchaRudna",1691,1);
+addTime("muzi","StaraCervenaVoda",1720,1);
+addTime("muzi","Janovice",1749,1);
+addTime("muzi","Lipovalazne",1755,1);
+addTime("muzi","Ryzoviste",1797,1);
+addTime("muzi","SirokaNiva",1853,1);
+addTime("muzi","KuneticeB",1870,1);
+addTime("muzi","Liptan",1970,1);
+addTime("muzi","SirokyBrodA",2185,1);
+addTime("muzi","SirokyBrodB",2022,1);
+addTime("muzi","KuneticeA",2203,1);
+addTime("muzi","StaraVes",3015,1);
+addTime("muzi","BilyPotok",3212,1);
+addTime("muzi","SlezskeRudoltice",3220,1);
+addTime("muzi","Milotice",3287,1);
+addTime("muzi","Karlovice",3464,1);
+addTime("muzi","Bridlicna",4907,1);
+addTime("muzi","SuchaRudnaB",7000,1);
+addTime("muzi","VrbnoB",7000,1);
+addTime("muzi","Vraclavek",7000,1);
+addTime("muzi","TremesnaII",7000,1);
+
+addTime("muzi","Leskovec",7000,2);
+addTime("muzi","Vrbno",1559,2);
+addTime("muzi","Zator",2351,2);
+addTime("muzi","SuchaRudna",1975,2);
+addTime("muzi","StaraCervenaVoda",1676,2);
+addTime("muzi","Janovice",1602,2);
+addTime("muzi","Lipovalazne",7000,2);
+addTime("muzi","Ryzoviste",1897,2);
+addTime("muzi","SirokaNiva",1727,2);
+addTime("muzi","KuneticeB",1777,2);
+addTime("muzi","Liptan",1784,2);
+addTime("muzi","SirokyBrodA",1583,2);
+addTime("muzi","SirokyBrodB",1709,2);
+addTime("muzi","KuneticeA",1819,2);
+addTime("muzi","StaraVes",2385,2);
+addTime("muzi","BilyPotok",1550,2);
+addTime("muzi","SlezskeRudoltice",1864,2);
+addTime("muzi","Milotice",1627,2);
+addTime("muzi","Karlovice",7000,2);
+addTime("muzi","Bridlicna",1643,2);
+addTime("muzi","SuchaRudnaB",7000,2);
+addTime("muzi","VrbnoB",7000,2);
+addTime("muzi","Vraclavek",7000,2);
+addTime("muzi","TremesnaII",7000,2);
+
+
+addTime("muzi","Leskovec",1993,3);
+addTime("muzi","Vrbno",1614,3);
+addTime("muzi","Zator",3064,3);
+addTime("muzi","SuchaRudna",1735,3);
+addTime("muzi","StaraCervenaVoda",1655,3);
+addTime("muzi","Janovice",2852,3);
+addTime("muzi","Lipovalazne",1829,3);
+addTime("muzi","Ryzoviste",2173,3);
+addTime("muzi","SirokaNiva",1834,3);
+addTime("muzi","KuneticeB",1853,3);
+addTime("muzi","Liptan",2095,3);
+addTime("muzi","SirokyBrodA",1733,3);
+addTime("muzi","SirokyBrodB",1745,3);
+addTime("muzi","KuneticeA",2357,3);
+addTime("muzi","StaraVes",7000,3);
+addTime("muzi","BilyPotok",1887,3);
+addTime("muzi","SlezskeRudoltice",2041,3);
+addTime("muzi","Milotice",2860,3);
+addTime("muzi","Karlovice",2628,3);
+addTime("muzi","Bridlicna",1997,3);
+addTime("muzi","SuchaRudnaB",2619,3);
+addTime("muzi","VrbnoB",7000,3);
+addTime("muzi","Vraclavek",3809,3);
+addTime("muzi","TremesnaII",6600,3);
+
+printGraf(document.getElementById("muziVsichniC"),"nic","muzi");
+
+pixelOnMouseOver(document.getElementById("muziVsichniC"),function(r,g,b){
+	if(barvy_tymy.muzi["("+r+","+g+","+b+")"]!=undefined)
+	{
+//		cas = casy.muzi[barvy_tymy.muzi["("+r+","+g+","+b+")"]][mouse()].toString();
+//		document.getElementById("out").innerHTML = barvy_tymy.muzi["("+r+","+g+","+b+")"]+"      "+cas[0]+cas[1]+","+cas[2]+cas[3];
+//		document.getElementById("out").setAttribute("style","color:rgb("+r+","+g+","+b+");");
+        document.getElementById("aaa").innerHTML = barvy_tymy.muzi["("+r+","+g+","+b+")"];
+        for(var i=0;i<casy.muzi[barvy_tymy.muzi["("+r+","+g+","+b+")"]].length;i++)
+        {
+            cas = casy.muzi[barvy_tymy.muzi["("+r+","+g+","+b+")"]][i].toString();
+            if(cas!=7000)
+                document.getElementById("a"+(i+1)).innerHTML=cas[0]+cas[1]+","+cas[2]+cas[3];
+            else
+                document.getElementById("a"+(i+1)).innerHTML="N";
+        }
+		printGraf(document.getElementById("muziVsichniC"),barvy_tymy.muzi["("+r+","+g+","+b+")"],"muzi");
+	}
+	
+});
+
+
+	</script>
+		
+	</div>
+	
+</body>
+</html>

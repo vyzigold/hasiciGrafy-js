@@ -1,0 +1,319 @@
+body{
+	background-color:black;
+}
+
+div#obal{
+	width: 960px;
+	padding: 0px;
+	margin: 10px auto;
+	border: 1px solid black;
+	background: #1b4f05;
+	text-align: center;
+}
+
+div#hlavni{
+	width: 600px;
+	float: left;
+	border-right: 1px dotted white;
+	padding: 0px 20px 0px 10px;
+}
+
+header{
+	background-color: #5fb23c;
+	margin: 0;
+	padding:  0px;
+}
+
+header h1{
+	margin: 0px 30px;
+	background-color: #5fb23c;
+	padding: 20px 0 20px 10px;
+	color: white;
+	text-align: left;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#menu-box {
+	background: #577613 url('../img/menu-bg.gif') repeat-x 0 0;
+	height: 35px;
+}
+
+
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/final_drop.html
+Copyright (c) 2005-2008 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+
+.menu { width: 960px; height: 38px; position: relative; margin: 0 auto; z-index: 100; }
+/* hack to correct IE5.5 faulty box model */
+* html .menu { width: 960px; w\idth: 960px; }
+
+/* remove all the bullets, borders and padding from the default list styling */
+.menu ul { list-style-type: none; }
+.menu ul ul { width: 102px; }
+
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+.menu li { float: left; width: 102px; position: relative; margin-right: 10px; }
+
+/* style the links for the top level */
+.menu a, .menu a:visited { display: block; text-decoration: underline; 
+	color: #05213c; width: 102px; height: 34px; border-top: none; background: #9bb7d3 url('../img/menu-bg.gif') repeat-x 0 0; line-height: 34px; }
+/* a hack so that IE5.5 faulty box model is corrected */
+* html .menu a, * html .menu a:visited { width: 102px; w\idth:102px; }
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+.menu ul ul { visibility: hidden; position: absolute; height: 0; top: 34px; left: 0; width: 160px; }
+/* another hack for IE5.5 */
+* html .menu ul ul { top: 33px; t\op: 34px; }
+
+
+/* style the second level links */
+.menu ul ul a, .menu ul ul a:visited { background: #D2D7B5; color: #000; height: auto; line-height: 1.3em; padding: 10px; width: 128px; border: 1px solid green; border-top: none; text-decoration: none; }
+.menu ul ul li a.first { border-top: 1px solid #577613 ; }
+/* yet another hack for IE5.5 */
+* html .menu ul ul a, * html .menu ul ul a:visited { width: 150px; w\idth: 128px; }
+
+/* style the top level hover */
+.menu a:hover, .menu ul ul a:hover { color: #9bb7d3; background: #05213c; text-decoration: none; }
+.menu :hover > a, .menu ul ul :hover > a { color: #9bb7d3; background: #05213c; }
+.menu li a.active { background: #05213c; color: #9bb7d3; }
+
+
+
+nav{
+	background-color: black;
+}
+
+a{
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+padding-left: 0px;
+margin: 0px;
+}
+
+.prvni{
+margin: 2px;
+}
+
+canvas{
+margin:5px;
+background-color: white;
+}
+
+
+p{
+	color: #E8E8E8;
+}
+
+article{
+	clear: both;
+	border-bottom: 1px solid #345e86;
+}
+
+article header{
+	background: #1b4f05;
+	padding: 0;
+}
+
+article time{
+	background-color: #1b4f05;
+	color: #b5e3a2;
+	float: left;
+	padding: 5px;
+	display: block;
+	margin-right: 20px;
+	width: 130px;
+}
+
+aside{
+	width: 310px;
+	float: right;
+}
+
+footer{
+	clear: both;
+	color: #E8E8E8;
+	padding: 20px;
+}
+
+body p{	
+	text-indent: 2em;
+}
+
+h3{
+	color: #cfcb46;
+	font-size: 1.3em;
+	padding: 5px 0px;
+	font-weight: normal;
+}
+
+img{
+	margin: 5px;
+}
+
+article footer{
+	text-align: right;
+	padding: 0;
+}
+
+li{
+	color: #E8E8E8;
+}
+
+h2{
+	color: #cfcb46;
+	text-align: center;
+}
+
+
+
+h3.kontakt{
+	margin: 5px 2px 5px 10px;
+}
+
+p#mail{
+	clear: both;
+	margin: 5px;
+}
+
+form p{
+}
+
+textarea{
+	margin-left: 30px;
+}
+
+p#left{
+	float: left;
+	width: 250px;
+	margin-top: 0px;
+}
+
+p#zprava{
+	margin-top: 10px;
+}
+
+.mujbutton{
+	margin-left: 30px;
+}
+
+h4{
+	color: #cfcb46;
+}
+
+.projekt{
+	margin: 0px 20px;
+}
+
+.download{
+	text-decoration: none;
+	background: #307414;
+	color: #a1d98a;
+	padding: 5px 20px;
+}
+
+.download:hover{
+	background: #a1d98a;
+	color: #307414;
+}
+
+.aplikace{
+	float: left;
+	margin-top: 0;
+	width: 150px;
+}
+
+aside#zkouska{
+clear: both;
+	width: 100px;
+}
+
+div.popis{
+	width: 580px;
+	float: left;
+	border-right: 1px dotted white;
+}
+
+.tvurce{
+	padding-top: 20px;
+}
+
+.ulozto{
+	float: left;
+	width: 50px;
+}
+
+article#last{
+	border-bottom: 0px;
+}
+
+.nazev{
+	text-align: center;
+	padding-right: 150px;
+}
+a:link{
+       text-decoration: none;
+}
+
+.jazyk{
+	text-decoration: none;
+	background: #307414;
+	color: #a1d98a;
+	padding: 3px 10px;
+	float: right;
+	margin: 0px;
+	border: 1px solid #578643;
+}
+
+.jazyk:hover{
+	color:#307414;
+	background: #a1d98a;
+}
+
+.jazyk_vybrany{
+	text-decoration: none;
+	background: #a1d98a;
+	color: #307414;
+	padding: 3px 10px;
+	float: right;
+	margin: 0px;
+	border: 1px solid #578643;
+}
+
+.chysta{
+	margin-bottom: 7px;
+	margin-right: 14px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 30px;
+    background-color: white;
+    position: relative;
+    top:-4px;
+    width:900px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-size: 12px;
+    padding: 0px;
+}
+canvas{
+	margin-bottom: 0px;
+}
+button{
+	padding:0px;
+	font-size: 9px;
+}
